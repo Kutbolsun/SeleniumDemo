@@ -35,22 +35,24 @@ public class ActionsDemo extends BaseTest {
         commandButton.click();
         Assert.assertTrue(commandButton.isEnabled());
 
+    }
     @Test
     public void testMoveToElementAndSelect(){
-            driver.get("https://www.imoving.com/");
+        driver.get("https://www.imoving.com/");
 
-            WebElement houseTypeSelectMenu = driver.findElement(By.id("houseTypeSelectList"));
-            Select select = new Select(houseTypeSelectMenu);
-            select.selectByValue("1080");
-            Helper.pause(3000);
+        WebElement houseTypeSelectMenu = driver.findElement(By.id("houseTypeSelectList"));
+        Select select = new Select(houseTypeSelectMenu);
+        select.selectByValue("1080");
+        Helper.pause(3000);
 
-            select.selectByVisibleText("My Apartment");
-            Helper.pause(3000);
-            select.selectByIndex(3);
-            Helper.pause(3000);
+        select.selectByVisibleText("My Apartment");
+        Helper.pause(3000);
+        select.selectByIndex(3);
+        Helper.pause(3000);
 
 
-        }
+
+
     }
 
 }
